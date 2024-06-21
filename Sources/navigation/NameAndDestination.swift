@@ -13,8 +13,7 @@ open class NameAndDestination<T: Identifiable<String>>: Identifiable, Hashable {
   public var destination: AnyDestination
   public var onSelection: (T) -> Void
 
-  public init(item: T, destination: @escaping Destination, detailsDestination: Destination? = nil,
-              onSelection: @escaping (T) -> Void) {
+  public init(item: T, destination: @escaping Destination, onSelection: @escaping (T) -> Void = { _ in }) {
     self.item = item
     self.destination = { AnyView(destination()) }
     self.onSelection = onSelection
