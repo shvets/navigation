@@ -1,3 +1,3 @@
 import SwiftUI
 
-public typealias Destination = () -> AnyView
+public typealias Destination = () -> any View

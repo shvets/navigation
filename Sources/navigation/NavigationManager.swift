@@ -5,7 +5,7 @@ open class NavigationManager: ObservableObject {
 
   public init() {}
 
-  public func add<S, T: NameAndDestination<S>>(_ nameAndDestionation: T) {
+  public func add<S, T: NameAndDestination<S>>(_ nameAndDestination: T) {
     navigationPath.append(nameAndDestionation)
   }
 
